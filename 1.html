@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COPY</title>
+    <style>
+        div {
+            width: 100%;
+            height: 100%;
+            position: fixed;
+        }
+
+        video {
+            width: 100%;
+            /* height: 100%; */
+            /* object-fit: fill; */
+            position: absolute;
+            z-index: 1;
+        }
+
+        form {
+            color: aliceblue;
+            /* background-color: aqua; */
+            top: 30%;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            /* border: 1px solid; */
+            width: 700px;
+            padding: 10px;
+            position: absolute;
+            z-index: 2;
+        }
+
+        li {
+            list-style-type: none;
+        }
+
+        label {
+            cursor: pointer;
+            display: inline-block;
+            padding: 10px;
+            text-align: right;
+            width: 120px;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <video src="./video/video1.mp4" autoplay muted loop></video>
+        <form>
+            <ul>
+                <li>
+                    <label for="name">Activity name</label>
+                    <!-- <input type="text" id="name" placeholder="12222"> -->
+                    <textarea id="name" cols="50" rows="1"></textarea>
+                </li>
+                <li>
+                    <label for="zone">Activity zone</label>
+                    <select id="zone">
+                        <option disabled selected>please select your zone</option>
+                        <option>Zone one</option>
+                        <option>Zone two</option>
+                    </select>
+                </li>
+                <li>
+                    <label for="time">Activity time</label>
+                    <input type="date" id="time">
+                    <span>-</span>
+                    <input type="time" id="time">
+                </li>
+                <li>
+                    <label for="delivery">Instant delivery</label>
+                    <input type="checkbox" class="switch-box">
+                </li>
+                <li>
+                    <label>Activity type</label>
+                    <input type="checkbox">Online activities
+                    <input type="checkbox">Promotion activities
+                    <input type="checkbox">Offline activities
+                    <br>
+                    <label></label>
+                    <input type="checkbox">Simple brand exposure
+                </li>
+                <li>
+                    <label>Resource</label>
+                    <input type="radio" name="1">Sponsor
+                    <input type="radio" name="1">Venue
+                </li>
+                <li>
+                    <label for="form">Activity form</label>
+                    <textarea id="form" cols="50" rows="3"></textarea>
+                </li>
+                <li>
+                    <br>
+                    <label for="button"></label>
+                    <input type="button" value="Create" id="button">
+                    <input type="button" value="Cancle" id="button">
+                </li>
+            </ul>
+        </form>
+    </div>
+
+</body>
+
+</html>
